@@ -19,9 +19,13 @@ type Reaction {
     createdAt: String
     username: String
 }
-  type Query {
+type Query {
+    users: [User]
+    user(username: String!): User
     thoughts(username: String): [Thought]
+    thought(_id: ID!): Thought
   }
+  
 `;
 
 // export the typeDefs
