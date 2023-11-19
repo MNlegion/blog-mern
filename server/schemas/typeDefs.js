@@ -13,6 +13,15 @@ type Thought {
     reactions: [Reaction]
 }
 
+type User {
+    _id: ID
+    username: String
+    email: String
+    friendCount: Int
+    thoughts: [Thought]
+    friends: [User]
+  }
+
 type Reaction {
     _id: ID
     reactionBody: String
